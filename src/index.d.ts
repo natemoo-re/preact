@@ -247,6 +247,11 @@ declare namespace preact {
 	// TODO: Revisit what the public type of this is...
 	const Fragment: ComponentClass<{}, {}>;
 
+	const Comment: ComponentClass<
+		{ value?: string | number; children?: never[] },
+		{}
+	>;
+
 	//
 	// Preact options
 	// -----------------------------------

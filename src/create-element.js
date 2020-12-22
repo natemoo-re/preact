@@ -91,6 +91,12 @@ export function Fragment(props) {
 	return props.children;
 }
 
+export function Comment(props) {
+	return typeof props.value === 'string' || typeof props.value === 'number'
+		? createVNode('#comment', props.value, null, null)
+		: null;
+}
+
 /**
  * Check if a the argument is a valid Preact VNode.
  * @param {*} vnode

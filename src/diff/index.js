@@ -329,6 +329,10 @@ function diffElementNodes(
 			return document.createTextNode(newProps);
 		}
 
+		if (newVNode.type === '#comment') {
+			return document.createComment(newProps);
+		}
+
 		dom = isSvg
 			? document.createElementNS('http://www.w3.org/2000/svg', newVNode.type)
 			: document.createElement(

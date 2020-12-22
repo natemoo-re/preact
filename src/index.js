@@ -3,6 +3,7 @@ export {
 	createElement,
 	createElement as h,
 	Fragment,
+	Comment,
 	createRef,
 	isValidElement
 } from './create-element';
